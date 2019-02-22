@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+body {
+	font-family: "Arial", "Microsoft JhengHei";
+	font-size: large;
+	margin: 0px;
+}
+
+/* Common CSS Area Start*/
+.textA {
+	font-size: 20px;
+	color: #111;
+}
+.textB {
+	font-size: 16px;
+	color: #8c10a9;
+}
+
+.topFlex{
+    width: 100%;
+    display: inline-flex;
+    background-color: #aef0d7;
+    padding-bottom: 10px;
+}
+.typeTell{
+	bottom: 0px;
+	font-size: 12px;
+	padding:2px 10px;
+}
+.topFlex .langBtn{
+    flex: 1;
+    border:4px solid #EE4;
+    background-color: #FAA;
+    margin: 5px 1vw;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 24px;
+}
+
+#colorBar, .topFlex, .typeTell{
+    background-color: #aef0d7;
+}
+
+.colorBar{
+    width: 100%;
+    display: inline-flex;
+    margin: 0;
+	padding: 0;
+}
+
+.colorBar .colorBtn{
+    flex: 1;
+    font-size: 22px;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+	padding: 20px 0;
+	border-radius: 10px 10px 0 0;
+	opacity: 0.6;
+	transition: all 0.3s ease-in;
+}
+.colorBar .colorBtn:hover{
+	opacity: 0.8;
+}
+
+#infoSect{margin-top: -1px;}
+.infoSect > div{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	border: 10px solid #111;
+	border-top-width: 30px;
+	padding: 20px 20px 40px;
+	transition: all 0.5s ease-out;
+}
+.infoSect .colorText{
+	padding: 20px 0;
+}
+.infoSect .formCmp{
+	padding: 10px 0;
+}
+.infoSect input, .infoSect select, .infoSect option{
+	font-size: large;
+	padding: 4px 5px;
+}
+
+#pop {
+	border-color: #118;
+	background-color: #a0d0f0;
+	border: 10px solid #118;
+	border-radius: 20px 20px 0 0;
+	height: 100px;
+	overflow: hidden;
+	position: fixed;
+	top: 100vh;
+	right: 0px;
+	transition: all 0.9s ease-out;
+	box-sizing: border-box;
+}
+#pop.show{
+	top: calc(100vh - 100px);
+}
+#pop .content{
+	line-height: 50px;
+	height: 50px;
+	font-size: 14px;
+	text-align: center;
+	padding: 15px 40px;
+	display: block;
+	color: #3c3c9c;
+}
+
+
+@media screen and (max-width: 679px) {
+	.colorBar .colorBtn{
+		font-size: 14px;
+	}
+	.infoSect > div{
+		font-size: 16px;
+		padding:10px 5px 40px 5px;
+		border-top-width: 20px;
+		border-left-width: 4px;
+		border-right-width: 4px;
+		border-bottom-width: 4px;
+	}
+}
+
+/* Vue CSS Start */
+.fade-leave-active {
+	display: none;
+}
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .6s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+	opacity: 0;
+}
+
+.expandBox-leave-active, .expandBox-enter{
+	height: 0px !important;
+}
+.expandBox-enter-active, .expandBox-leave-active {
+	transition: all .6s ease;
+}
+.expandBox-enter-active, .expandBox-leave{
+	/* Just give target height and do not set height here */
+}
+/* Vue CSS End */

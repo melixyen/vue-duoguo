@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-TW" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<meta name="description" content="VueDuoGUo ES5 Demo" />
+<meta name="keywords" content="Vue Vue.js VueDuoGUo" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>VueDuoGUo ES5 Demo by js file</title>
+
+<link rel="stylesheet" type="text/css" href="./lib/ui.css">
+
+<script type="text/javascript" src="./lib/vue.js"></script>
+<script type="text/javascript" src="./lib/vue-duoguo.js"></script>
+
+<!-- Custom html template -->
+<script type="text/x-template" id="tpl_topBtn">
+	<div class="topFlex">
+		<div class="langBtn" v-on:click="changeLang('en')">{{_LANG.str001}}</div>
+		<div class="langBtn" v-on:click="changeLang('cht')">{{_LANG.str002}}</div>
+		<div class="langBtn" v-on:click="changeLang('jp')">{{_LANG.str003}}</div>
+	</div>
+</script>
+<script type="text/x-template" id="type_tell"><div class="typeTell">{{_LANG.str033.replace("{type}","javascript")}}</div></script>
+<!-- Custom javascript function -->
+<script type="text/javascript">
+
+VueDuoGuo.setConfig({
+	lang: 'en',//In this case, lang value must same of language file
+	baseLang: "en",
+	path: "./lang_js",
+	filename: "{lang}.js",
+	global: "_LANG",
+	autoload: true,
+	autoCallback: function(opt, langString){
+		DD.initFn();//Be sure language string loaded before initial function, the default language in this example is en
+	}
+})
+</script>
+<script type="text/javascript" src="./lib/ui.js"></script>
+</head>
+<body>
+	<div id="top">
+		<top-btn></top-btn>
+		<type_tell></type_tell>
+	</div>
+	<div id="main"></div>
+	<div id="pop" class="pop"><div class="text"></div></div>
+</body>
+</html>
