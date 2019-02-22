@@ -12,6 +12,18 @@ This is a multi language plugin for Vue.js that help you load different language
 <script type="text/javascript" src="./lib/vue.js"></script>
 <script type="text/javascript" src="./lib/vue-duoguo.js"></script>
 ```
+#### CDN
+[https://melixyen.github.io/vue-duoguo/vue-duoguo.min.js    (Minify)](https://melixyen.github.io/vue-duoguo/vue-duoguo.min.js)
+```html
+<script type="text/javascript" src="https://melixyen.github.io/vue-duoguo/vue-duoguo.min.js"></script>
+```
+
+
+[https://melixyen.github.io/vue-duoguo/vue-duoguo.js    (Full)](https://melixyen.github.io/vue-duoguo/vue-duoguo.js)
+
+```html
+<script type="text/javascript" src="https://melixyen.github.io/vue-duoguo/vue-duoguo.js"></script>
+```
 
 ## Mode and Type
 The vue-duoguo plugin support 2 mode to load multi language string:
